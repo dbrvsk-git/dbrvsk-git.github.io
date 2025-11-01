@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap');
+
+
+:root {
+  --ff-heading: 'Anton', 'Helvetica Neue', Arial, sans-serif;
+  --ff-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, .logo {
+  font-family: var(--ff-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: clamp(2rem, 4vw, 5rem);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 8px rgba(255,120,20,0.08);
+}
+
+h3 {
+  font-family: var(--ff-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  line-height: 150%;
+
+}
+
+body, p, .btn {
+  font-family: var(--ff-body);
+  line-height: 150%;
+  font-size: 1rem;
+  }
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.jumbo {
+        background-image: url("gp2-5-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%; 
+        padding: 8% 0;
+
+      }
+
+      .jumbo2 {
+        background-image: url("gp1-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .kapsa {
+        background-image: url("kapsa.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 480px;
+      }
+
+      .parallax {
+  background-image: url("back4.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+      #btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+        z-index: 10;
+}
+
+/* --- animace underline start--- */
+
+nav {
+  transition: linear 0.25s;
+  background-color: rgba(255, 255, 255, 1);
+margin-top: -31px;
+ border-left: 15px solid #0d6efd;
+ border-right: 15px solid #0d6efd;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav.at-top {
+ background-color: rgba(255, 255, 255, 1);
+  
+  transition: linear 0.25s;
+  width: 100% !important;
+  opacity: 1;
+}
+
+.navbar-nav a  {
+  position: relative;
+  text-decoration: none; /* vypnout default underline */
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-nav a::after  {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* odsazení pod text */
+  width: 100%;
+  height: 3px; /* tloušťka čáry */
+  background: currentColor; /* stejné jako barva textu */
+  transform: scaleX(0); /* schované */
+  transform-origin: left; /* začíná vlevo */
+  transition: transform 0.3s ease;
+  }
+
+.navbar-nav a:hover::after {
+  transform: scaleX(1); /* postupně se objeví */
+}
+
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 6px;
+  }
+}
+
+/* zrusi podtrzeni */
+@media (max-width: 575.98px) {
+.navbar-nav a::after { display: none; }
+  }
+
+
+
+/* Hamburger - 3 čáry */
+.navbar-toggler {
+  border: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	box-shadow: none !important; /* zruší focus ring */
+}
+
+/* Hamburger čáry */
+.navbar-toggler span,
+.navbar-toggler span::before,
+.navbar-toggler span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.navbar-toggler span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler span::before {
+  content: '';
+  top: -10px;
+}
+
+.navbar-toggler span::after {
+  content: '';
+  top: 10px;
+}
+
+/* Po otevření menu → křížek */
+.navbar-toggler:not(.collapsed) span {
+  background-color: transparent; /* střední čára zmizí */
+}
+
+.navbar-toggler:not(.collapsed) span::before {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.navbar-toggler:not(.collapsed) span::after {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+
+/* --- fader start--- */
+
+.tag {
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: ease-out;
+}
+
+/* čistý fade-in bez pohybu */
+.fadein {
+  transform: none;
+  transition-duration: 0.8s;   /* střední */
+}
+
+/* fade-in směr + vlastní rychlost */
+.from-bottom {
+  transform: translateY(10vh);
+  transition-duration: 0.6s;   /* střední */
+}
+.from-top {
+  transform: translateY(-10vh);
+  transition-duration: 0.4s;   /* rychlejší */
+}
+.from-left {
+  transform: translateX(-10vw);
+  transition-duration: 0.9s;   /* pomalejší */
+}
+.from-right {
+  transform: translateX(10vw);
+  transition-duration: 0.7s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* --- fader konec --- */
+
+  @media (min-width: 768px) {
+    .opacity-lg-0 {
+      background-color: transparent !important; /* zruší bg-dark */
+    }
+  }
+
+@media (max-width: 575.98px) { 
+
+  .jumbo {
+  margin-top: 40px;
+
+      }
+
+  nav.sticky-top {
+position: absolute;
+margin-top: 0;
+width: 100%;
+
+  }
+
+  nav {
+
+ border-left: 7px solid #0d6efd;
+ border-right: 7px solid #0d6efd;
+}
+  
+}
