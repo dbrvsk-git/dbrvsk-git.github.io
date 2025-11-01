@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's starter page</title>
+
+   <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+   <nav>
+    <button class="rand_pics btn color_changer">Nový obrázek</button>
+      <span class="light-dark"><img src="https://img.icons8.com/?size=100&id=70942&format=png&color=000000" alt="b&w" height="25px" style="background-color: white; border-radius: 12px;"></span><input type="checkbox" id="dark-mode" class="input"> <label for="dark-mode" class="label"><div class="circle"></div></label>
+ </nav>
+
+<div class="center">
+
+  <div class="dev"><h1>Developer's starter page</h1></div>
+
+<div class="leva">
+
+<!-- Focus Section -->
+<section class="focus_section color_changer">
+
+<h2 id="datum"></h2>
+
+  <h4 class="svatek" id="svatek">Načítám...</h4>
+
+<h4 id="btc">Načítám cenu Bitcoinu...</h4>
+
+<time id="time"></time>
+
+<h1>  
+<span id="greeting"></span>
+<span id="jmeno" contenteditable="true"></span>
+
+</h1>
+
+<h3>Co chceš dnes dělat?</h3>
+<h2 id="focus" class="bigger" contenteditable="true"></h2>
+
+</section>
+
+<!-- Weather Section -->
+<section class="weather_section">
+  <img src="" alt="" id="weather-icon" width="50" height="50" />
+  <div id="location">Načítám lokaci...</div>
+  <div class="desc">Načítám počasí...</div>
+  <div class="weather">
+    <div class="c">-- °C</div></div>
+    <div class="min-max">
+      <span class="min-temp">-- °C</span> / <span class="max-temp">-- °C</span>
+  </div>
+  <div class="info">
+      <p class="wind">Vítr: -- km/h</p>
+    <p class="humidity">Vlhkost: --%</p>
+    <p class="precip">Srážky: --%</p>
+    <p class="uvindex">UV Index: --</p>
+      <p class="tlak">Tlak: -- hPa</p>
+        <p class="visibility">Viditelnost: -- km</p>
+  </div>
+</section>
+</div> <!--leva-->
+
+<div class="prava">
+<div class="collapsible color_changer"><strong>Frenchpress časovač</strong></div>
+<div class="content">
+<div class="press-box">
+<div id="timerA" class="timer">
+  <h6>Nech vychladnout vodu</h6>
+  <div class="display" id="displayA">00:00</div>
+  <div class="controls">
+    <div class="plusmin">
+      Min
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('A','min',-1)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('A','min',1)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <div class="plusmin">
+      Sec
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('A','sec',-5)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('A','sec',5)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <button class="button-tim" onclick="resetTimer('A')"><img src="https://img.icons8.com/?size=100&id=BUtO0i9u8bcs&format=png&color=FA5252" height="30"></button>
+  </div>
+</div>
+
+<div id="timerB" class="timer">
+  <h6>Zamíchej frenchpress</h6>
+  <div class="display" id="displayB">00:00</div>
+  <div class="controls">
+    <div class="plusmin">
+      Min
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('B','min',-1)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('B','min',1)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <div class="plusmin">
+      Sec
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('B','sec',-5)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('B','sec',5)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <button class="button-tim" onclick="resetTimer('B')"><img src="https://img.icons8.com/?size=100&id=BUtO0i9u8bcs&format=png&color=FA5252" height="30"></button>
+  </div>
+</div>
+
+<div id="timerC" class="timer">
+  <h6>A jdeme do finále...</h6>
+  <div class="display" id="displayC">00:00</div>
+  <div class="controls">
+    <div class="plusmin">
+      Min
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('C','min',-1)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('C','min',1)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <div class="plusmin">
+      Sec
+      <div class="french_tlac">
+        <button class="button-tim" onclick="adjustTime('C','sec',-5)"><img src="https://img.icons8.com/?size=100&id=1503&format=png&color=000000" height="25"></button>
+        <button class="button-tim" onclick="adjustTime('C','sec',5)"><img src="https://img.icons8.com/?size=100&id=1500&format=png&color=000000" height="25"></button>
+      </div>
+    </div>
+    <button class="button-tim" onclick="resetTimer('C')"><img src="https://img.icons8.com/?size=100&id=BUtO0i9u8bcs&format=png&color=FA5252" height="30"></button>
+  </div>
+</div>
+
+
+<div class="main-controls">
+  <button id="startPauseBtn" onclick="toggleStartPause()">
+    <img id="startPauseIcon" src="https://img.icons8.com/?size=100&id=59862&format=png&color=000000" height="40" alt="Start">
+  </button>
+  <button onclick="stopSequence()"><img src="https://img.icons8.com/?size=100&id=9984&format=png&color=000000" height="40" alt="Stop"></button>
+  <button onclick="resetAll()"><img src="https://img.icons8.com/?size=100&id=BUtO0i9u8bcs&format=png&color=FA5252" height="40" alt="Reset"></button>
+</div>
+
+<audio id="ding" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+<div class="priprava color_changer">
+<strong>Jak na chutnou kávu z frenchpressu</strong>
+<ul>
+  <li>Dejte vařit vodu. Ideální teplota k zalití je 95 °C, z bodu varu se na tuto hodnotu dostanete přibližně za půl minuty (první časovač)</li>
+  <li>Zalijte kávu, ideální je hrubě namletá, jako krystalový cukr, na začátek zkuste poměr 10 g kávy na 100 ml vody</li>
+  <li>Počkejte jednu minutu (druhý časovač) a kávu zamíchejte</li>
+  <li>Louhujte další cca. tři minuty (třetí časovač), stlačte píst a můžete nalít kávu.</li>
+  <li>Všechny hodnoty jsou jen přibližné, nebojte se experimentovat</li>
+</ul>
+</div>
+</div>
+</div>
+
+<section  class="news_section color_changer">
+   <h2>Aktuální zprávy</h2>
+ <div id="news-container">Načítám zprávy...</div>
+ <div id="news">Načítám zprávy…</div>
+ 
+</section>
+</div><!-- prava-->
+<!--
+<section class="rand_pics">
+<img src="https://picsum.photos/300/300?random=1">
+
+</section>
+-->
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
