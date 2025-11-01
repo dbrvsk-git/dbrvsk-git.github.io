@@ -1,0 +1,579 @@
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --blue: #0066ff;
+}
+
+h1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.85rem, 4vw, 4rem);
+  font-weight: normal;
+  line-height: 150%;
+  background-color: #000;
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  font-weight: normal;
+  line-height: 150%;
+  background-color: #000;
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.15rem, 1.5vw, 2rem);
+  font-weight: normal;
+  line-height: 150%;
+  background-color: #3b3b3b;
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1rem, 1.15vw, 1.65rem);
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+}
+
+h5 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1rem, 1vw, 1.45rem);
+  font-weight: normal;
+  line-height: 150%;
+  margin-bottom: 0;
+}
+
+h1::before,
+h2::before,
+h3::before {
+  content: "_";
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.contact-info {
+  padding-top: 1.5rem;
+  margin: 0rem 0rem 3.4rem 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+.contact-info i {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+textarea.form-control {
+  min-height: 40px !important;
+  height: 40px;
+}
+
+.form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1rem, 1.5vw, 2.5rem);
+  font-weight: normal;
+}
+
+.nav a {
+  display: inline-block;
+  position: relative;
+}
+
+.nav a:hover {
+  color: var(--text-color);
+}
+
+.nav a::before {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  white-space: nowrap;
+}
+
+a:hover::before {
+  opacity: 1;
+}
+
+.nav-link i {
+  display: block;
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1);
+  transform-origin: center;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateX(-18px) translateY(-50%);
+  opacity: 0;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.26s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.nav-link:hover::before {
+  transform: translateX(0) translateY(-50%);
+  opacity: 1;
+}
+.nav-link:hover i,
+.nav-link:focus i {
+  transform: scale(1.18);
+}
+
+.nav .home::before {
+  content: "Domů";
+}
+.nav .about::before {
+  content: "O mně";
+}
+.nav .projekty::before {
+  content: "Projekty";
+}
+.nav .blog::before {
+  content: "Blog";
+}
+.nav .kontakt::before {
+  content: "Kontakt";
+}
+
+.nav-link.active {
+  color: lightgray; /* třeba zvýraznění modře */
+  pointer-events: none; /* nejde na něj kliknout */
+  opacity: 0.8; /* opticky slabší */
+  cursor: default; /* kurzor nebude ruka */
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 900;
+  border: none;
+  background: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* navigace */
+nav {
+  position: fixed;
+  top: 0;
+  right: -250px; /* schovaná vpravo */
+  width: 220px;
+  height: 100%;
+  /* background: rgba(255,255,255,0.7); */
+  background-color: #fff;
+  transition: right 0.3s ease-in-out;
+  z-index: 500;
+  box-shadow: -6px -1px 21px -8px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: -6px -1px 21px -8px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -6px -1px 21px -8px rgba(0, 0, 0, 0.51);
+}
+
+nav.open {
+  right: 0; /* vyjede */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+/* projekty - draggable gallery */
+.draggable-gallery {
+  overflow-x: auto;
+  cursor: grab;
+  scroll-behavior: auto;
+  user-select: none;
+  scrollbar-color: lightgrey rgb(255, 255, 255);
+  margin-bottom: 5rem;
+}
+.draggable-gallery img {
+  transition: transform 0.3s;
+}
+.draggable-gallery img:hover {
+  transform: scale(1.05);
+}
+.draggable-gallery.active {
+  cursor: grabbing;
+}
+.draggable-gallery > .col-sm-3 {
+  flex: 0 0 calc((100% / 3.5)); /* zobrazí 3 celé + 1 částečně */
+}
+
+/* zvětšení obrázku při hoveru (projekty) */
+
+.grow {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.collapse {
+  padding-top: 1rem;
+  color: var(--text-color);
+}
+
+.collapsing {
+  transition: height 0s linear;
+}
+
+.photoshop img {
+  max-height: 200px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+/* modal start */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 5vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+#caption {
+  margin: 20px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 90%;
+}
+/* modal konec */
+
+.line {
+  border-top: 3px solid;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.shadowbtn {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.shadowbtn:hover {
+  transform: translateY(-2px);
+}
+
+.shadowbtn:active {
+  box-shadow: none;
+}
+
+.tech-icons {
+  margin-bottom: 3rem;
+}
+
+.tech-icons img {
+  width: 45px;
+}
+
+.tech-item {
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
+  font-size: 0.9rem;
+}
+
+.hello {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(3rem, 6vw, 8rem);
+  color: var(--blue);
+  line-height: 125%;
+}
+
+.blinking-cursor {
+  font-size: clamp(3rem, 6.5vw, 10rem);
+  color: var(--text-color);
+  letter-spacing: -0.25em !important;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+  color: transparent;
+  animation: 1s step-end infinite 1.75s blink;
+  animation-fill-mode: both;
+}
+
+@keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #000;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--text-color);
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #000;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #000;
+  }
+}
+
+@-o-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #000;
+  }
+}
+
+.cosmo-animate {
+  animation-name: cosmo-animate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes cosmo-animate {
+  0% {
+    animation-timing-function: ease;
+    transform: rotate(25deg);
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    animation-timing-function: ease;
+    transform: rotate(5deg);
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    animation-timing-function: ease;
+    transform: rotate(25deg);
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* wrapper pro sekce */
+.section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* sekce absolutně */
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.6s ease-out;
+  overflow: auto;
+}
+
+/* všechny sekce výchozí stav – schované vpravo */
+section {
+  transform: translateX(100%);
+}
+
+/* první sekce výchozí viditelná */
+section:first-of-type {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.content {
+  color: var(--text-color);
+}
+
+#one,
+#two,
+#three,
+#four,
+#five {
+  padding: 4%;
+  background-color: #fff;
+  box-shadow: -11px -1px 21px -8px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: -11px -1px 21px -8px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -11px -1px 21px -8px rgba(0, 0, 0, 0.51);
+}
+
+#one {
+  background-image: url(images/back5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 767.98px) {
+  .draggable-gallery > .col-sm-3 {
+    flex: 0 0 calc(100% / 1.3); /* 1 celý + kus druhého */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .menu-toggle {
+    position: fixed;
+    top: 0rem;
+    right: 0.5rem;
+  }
+
+  #one,
+  #two,
+  #three,
+  #four,
+  #five {
+    padding: 1rem;
+    background-color: #fff;
+  }
+
+  .contact-info {
+    padding-top: 1rem;
+    margin: 0rem 0rem 3.4rem 0rem;
+  }
+
+  .photoshop img {
+    max-height: 150px;
+  }
+}
