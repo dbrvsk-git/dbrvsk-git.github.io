@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitmania</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+         <link href="styl.css" rel="stylesheet">
+      
+  </head>
+  <body>
+      
+    
+
+
+<div class="jumbotron bg-video" id="video">
+
+<video autoplay loop muted> <source src="images/video.mp4" type="video/mp4"></video>
+  <div class="hero-img"></div>
+  
+    <div class="container mt-0 mt-lg-3">
+<nav class="navbar navbar-expand-md">
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+      aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+    </button>
+  <div class="collapse navbar-collapse mt-0 mt-md-5" id="mynavbar">
+  
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">     
+          
+       <li class="nav-item me-0 me-sm-2"><a href="#cenik" class="yellow_bg but nav-link">Ceník</a></li>
+       <li class="nav-item me-0 me-sm-2"><a href="#novinky" class="yellow_bg but nav-link">Novinky</a></li>
+     <li class="nav-item me-0 me-sm-2"> <a href="#vybaveni" class="yellow_bg but nav-link">Vybavení</a></li>
+     <li class="nav-item me-0 me-sm-2"> <a href="#" class="yellow_bg but nav-link">Rezervace</a></li>
+       <li class="nav-item me-0 me-sm-2"><a href="#kontakt" class="yellow_bg but nav-link">Kontakt</a></li>
+     <li class="nav-item me-0 me-sm-2"> <a href="#" class="yellow_bg but nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Přihlášení</a></li>
+       </ul>  
+   </div> <!-- navbar-nav -->
+ 
+    <div class="soc me-0 me-lg-5">
+  <a href="#"> <i class="bi bi-facebook me-0 me-lg-3" style="font-size: 2.5rem; color: rgb(255, 195, 61);"></i></a>
+   <a href="#"> <i class="bi bi-instagram " style="font-size:2.5rem; color: rgb(255, 195, 61);"></i></a>
+ </div>  
+   
+  
+<a href="index.html" class="logo1"><img src="images/logo_bile.png" class="img-fluid"  loading="lazy"></a>
+   
+
+</nav> 
+  </div> 
+
+
+  
+    <!-- modal prihlaseni start -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <!-- Hlavička -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Přihlášení</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+
+      <!-- Tělo -->
+      <div class="modal-body">
+        <form>
+          <!-- E-mail -->
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="zadejte e-mail">
+          </div>
+
+          <!-- Heslo -->
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Heslo</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="zadejte heslo">
+          </div>
+
+          <!-- Odkazy -->
+          <div class="d-flex justify-content-between">
+            <a href="#" class="small">Ještě nejste registrovaní?</a>
+            <a href="#" class="small">Zapomenuté heslo</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Paticka -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+        <button type="submit" class="btn btn-warning">Přihlásit</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- modal prihlaseni konec -->
+  
+     <a href="index.html" class="logo2 text-center"><img src="images/logo_bile.png" class="img" loading="lazy"></a>
+
+    <div class="centering">
+      <div class="headline mb-0 mb-sm-5" style="color: var(--yellow);">Fitmania - Vaše nové fitko</div>
+      
+    <div class="container  my-3 my-md-4">
+  <div class="row justify-content-between gx-0">
+    <div class="col p-2 p-md-3 p-lg-4 mb-3 mb-md-0 opac_leva">
+       <h3>Otevírací doba</h3>
+      <div class="row"><div class="col-6 col-md-12">
+        
+        <p>Pondělí - Pátek <br>
+        <strong>06:00 - 22:00</strong>
+        </p></div>
+       <div class="col-6 col-md-12">
+            <p>Sobota, neděle<br>
+        <strong>07:00 - 22:00</strong>
+        </p></div>
+     </div></div>
+    
+    <div class="col p-2 p-md-3 p-lg-4 opac_prava">        
+    
+      
+     <h3>Kde nás najdete</h3>
+    <div class="row">
+        
+        <div class="col-12 col-md-7">
+        
+        <p>Krátká 28, Praha 5</p>
+        <p>MHD v dosahu, parkování pro klienty</p>
+        </div>
+           <div class="col-12 col-md-4 ms-0  ms-lg-4 ms-md-2 mt-4 mt-md-0">
+        
+        <p><a href="#" class="text-white text-decoration-none">info@fitmania.cz</a></p>
+        <p>tel. 735 159 753 </p>
+        </div>
+    </div>
+</div>
+  </div>
+</div><!-- oteviracka + kontakt --> 
+
+<div class="container  my-3 my-md-5">
+  
+  <div class="row justify-content-between gx-0">
+    <div class="col-12 col-md-3 mb-3 mb-md-0 ycard">
+       <a href="#" class="text-decoration-none text-black">
+    <div class="yellow_bg p-3 p-lg-4 rounded-4 h-100">  <h2 class="smaller">První vstup zdarma</h2>
+      
+      <i class="bi bi-arrow-right sipka"></i>      
+      </div></a>
+    </div>
+    
+  <div class="col-12 col-md-3  mb-3 mb-md-0 ycard">
+    <a href="#vybaveni" class="text-decoration-none text-black">
+    <div class="yellow_bg p-3 p-lg-4 rounded-4 h-100">
+     <h2 class="smaller">Moderní vybavení</h2>
+    
+        <i class="bi bi-arrow-right sipka"></i>
+    </div></a>
+    </div>
+   
+     <div class="col-12 col-md-3 ycard"> <a href="#treneri" class="text-decoration-none text-black">
+    <div class="yellow_bg p-3 p-lg-4 rounded-4 h-100">
+    <h2 class="smaller">Zkušení trenéři</h2>
+       
+         <i class="bi bi-arrow-right sipka"></i>  
+       </div></a>
+    </div>
+  </div>
+</div>
+        
+
+
+   <div class="text-center bounce"> <a href="#novinky"><i class="bi bi-arrow-down-circle-fill" style="font-size: 3rem; color: rgb(255, 195, 61);"></i></a></div>
+  </div> <!-- centering -->      
+
+</div><!-- jumbotron konec --> 
+
+    <!-- novinky start --> 
+    <div id="novinky" class="container-fluid pt-3 pt-sm-5 pb-4 yellow_bg">
+<div class="container">
+  <div class="row">
+    <h2>Novinky</h2>
+
+ <div class="slider-wrapper overflow-hidden" id="sliderWrapper">
+    <div class="slider-track row flex-nowrap" id="sliderTrack">
+      
+<div class="slide col-12 col-md-4"> 
+  <div class="bg-white rounded-4 p-4 h-100">
+    <h4>Otevírací doba přes svátky</h4>
+    <p> 24. prosince otevřeno do 18:00<br>
+      25. - 26. prosince zavřeno<br> 1. ledna zavřeno</p>
+  </div></div>
+      <div class="slide col-12 col-md-4">
+        <div class="bg-white rounded-4 p-4 h-100">
+          <h4>Nové proteinové drinky na baru</h4>
+          <p>Vyzkoušejte nové proteiny od značky Nutrend, zaváděcí cena 25 Kč za 0,5l.</p> </div></div>
+
+      <div class="slide col-12 col-md-4">
+        <div class="bg-white rounded-4 p-4 h-100">
+          <h4>Nový legpress a zakopávací lavice</h4>
+          <p>Nakoupili jsme nové stroje Technogym. Přijďte vyzkoušet.</p>
+        </div>
+      </div>
+
+      <div class="slide col-12 col-md-4"> 
+  <div class="bg-white rounded-4 p-4 h-100">
+    <h4>Lorem ipsum dolor sit amet</h4>
+    <p> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+  </div></div>
+      <div class="slide col-12 col-md-4">
+        <div class="bg-white rounded-4 p-4 h-100">
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> </div></div>
+
+      <div class="slide col-12 col-md-4">
+        <div class="bg-white rounded-4 p-4 h-100">
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- ovládací prvky -->
+  <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+    <div class="pointer" id="prevBtn"><i class="bi bi-caret-left-fill fs-1"></i></div>
+    <div id="dots" class="d-flex gap-2 d-none"></div>
+    <div class="pointer" id="nextBtn"><i class="bi bi-caret-right-fill fs-1"></i></div>
+  </div>
+
+    </div>
+  </div>
+     </div><!-- novinky konec --> 
+    
+    
+     <!-- vybaveni + cenik start --> 
+        <div id="vybaveni" class="container-fluid py-4 py-sm-5 bg-black muscle_back">
+          
+          <div class="container">
+      <div class="row text-white gx-5">
+        
+        <h2 class="yellow">Co u nás najdete</h2>
+          <div class="col-md-6">
+        <h5>Posilovna</h5>
+<p>Klimatizovaná a profesionálně vybavená posilovna disponuje na dvou patrech veškerým vybavením, které při svém tréninku budete potřebovat. Najdete zde všechny nezbytné stroje pro každou svalovou partii, 3 sady jednoruček, velké činky se stojany, dřepovací klece, lavice. Nechybí ani veslařské trenažery, běžecké pásy a&nbsp;spinnery pro váš kardiovaskulární trénink. Dále můžete využít balanční  pomůcky, kettlebelly, TRX apod. Vybavení je povětšinou od značek Technogym a Matrix.</p>
+<ul>
+<li>Káva zdarma ke každému vstupu</li>
+<li>Na baru sportovní výživa (proteiny, nakopávače...)</li>
+<li>Prostorné šatny a sprchy</li>
+</ul>
+ <h5>Inbody</h5>
+<p>InBody je pokročilý nástroj pro analýzu tělesného složení, který vám poskytne detailní přehled o vašem těle.  Změřte svalovou hmotu, tukové tkáně, vodu a další parametry, abyste lépe pochopili svůj pokrok a nastavili efektivní tréninkový plán.</p>
+<ul>
+<li>Měření nezabere déle než 10 minut</li>
+<li>Rezervujte si termín z pohodlí domova</li>
+<li>Přesné údaje, které vám pomohou dosáhnout vašich fitness cílů.</li>
+            </ul>
+        </div><!-- col leva konec --> 
+        
+        
+           <div class="col-md-6">
+             
+            <h5> Wellness</h5>
+<p>Wellness zóna s finskou saunou je ideálním místem pro regeneraci a  relaxaci po náročném tréninku. Uvolněte tělo i mysl v příjemném  prostředí, kde si můžete dopřát blahodárné účinky sauny. Dopřejte si  dokonalý odpočinek a obnovte svou energii v našem wellness prostoru.</p>
+
+<ul>
+<li>Finská sauna zdarma v rámci vstupu</li>
+<li>Prostěradlo k zapůjčení na recepci</li>
+<li>Dokonalý odpočinek po tréninku</li>
+            </ul>
+
+<h5>Solárium</h5>
+<p>Solárium je ideální volbou pro dosažení krásného opálení během celého  roku. Užijte si komfortní a bezpečné prostředí, které vám poskytne  zdravý a rovnoměrný bronz bez vystavení slunečním škodlivým účinkům.  Dodejte své pleti krásný vzhled a zdravý nádech přímo ve fitness!</p>
+
+<ul>
+<li>Nejmodernější solárium značky MegaSun</li>
+<li>10% cashback na Váš členský účet</li>
+<li>Prémiová kosmetika k zakoupení na recepci</li>
+            </ul>
+             
+        </div> <!-- col prava konec --> 
+        
+        
+      
+
+  <!-- slider wrapper -->
+<div class="container my-5">
+
+  <!-- gallery wrapper -->
+  <div class="gallery-wrapper overflow-hidden" id="galleryWrapper">
+    <div class="gallery-track d-flex" id="galleryTrack">
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+        
+          <img src="images/gym1.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym2.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+      
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+      
+          <img src="images/gym3.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym4.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+      
+      </div>
+
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym7.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym8.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+      
+            <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym9.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym10.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+        
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+     
+          <img src="images/gym11.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+      
+          <img src="images/gym12.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+        
+      </div>
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym13.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+      
+          <img src="images/gym14.jpg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+        
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+      
+          <img src="images/gym15.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+       
+      </div>
+
+      <div class="gallery-slide col-12 col-md-6 px-2">
+       
+          <img src="images/gym16.jpeg" class="img-fluid w-100 gallery-zoomable" alt="gym equipment" loading="lazy">
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- ovládací prvky -->
+  <div class="gallery-controls d-flex justify-content-center align-items-center gap-3 mt-3">
+    <div class="yellow pointer" id="galleryPrev"><i class="bi bi-caret-left-fill fs-1"></i></div>
+    <div id="galleryDots" class="d-flex gap-2"></div>
+    <div class="yellow pointer" id="galleryNext"><i class="bi bi-caret-right-fill fs-1"></i></div>
+  </div>
+</div>
+
+<!-- lightbox -->
+<div id="galleryLightbox" 
+     class="position-fixed top-0 start-0 w-100 h-100 d-none align-items-center justify-content-center"
+     style="background: rgba(0,0,0,0.85); z-index: 1050;">
+  
+  <!-- zavírací křížek -->
+  <button id="galleryClose" 
+          class="btn btn-light position-absolute top-0 end-0 m-3 fs-3 fw-bold">×</button>
+  
+  <!-- šipky -->
+  <button id="galleryPrevBtn" 
+          class="btn btn-light position-absolute start-0 top-50 translate-middle-y ms-3">‹</button>
+  <button id="galleryNextBtn" 
+          class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-3">›</button>
+  
+  <!-- obsah lightboxu -->
+  <div class="text-center">
+    <img id="galleryLightboxImg" src="" class="img-fluid shadow" alt="" loading="lazy">
+    <div id="galleryCaption" class="text-white mt-3 d-none"></div>
+  </div>
+</div>
+ 
+        
+   </div></div>  
+    
+    <!-- cenik start -->  
+    <div id="cenik" class="container">
+    <div class="row mb-3 g-3">
+    <div class="headline">Začni svou <span class="yellow">cestu</span> ještě <span class="yellow">dnes</span></div>
+      
+                   
+                   
+                    <div class="container">
+  <div class="row g-3 mb-3">
+    <div class="col-6 col-md-3">
+          <div class="h-100 cenik_karta">
+      <h3 class="text-center mb-0 fs-5">Jedno&shy;rázové vstupné</h3>
+      <h2 class="fs-1 text-center yellow fw-bold my-2 my-md-5">220 <span class="fs-5">Kč</span></h2>
+      
+      <p>Neomezená délka cvičení, v ceně sauna, sprcha.</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="h-100 cenik_karta">
+            <h3 class="text-center mb-0 fs-5">Čtvrt&shy;letní permanentka</h3>
+      <h2 class="fs-1 text-center yellow fw-bold my-2 my-md-5">6 500 <span class="fs-5">Kč</span></h2>
+      
+      <p>Neomezená délka cvičení, v ceně sauna, sprcha. Sleva na solárium. </p>
+      </div>
+    </div>
+       <div class="col-6 col-md-3">
+     <div class="h-100 cenik_karta">
+         
+            <h3 class="text-center mb-0 fs-5">Polo&shy;letní permanentka</h3>
+      <h2 class="fs-1 text-center yellow fw-bold my-2 my-md-5">11 000 <span class="fs-5">Kč</span></h2>
+      
+      <p>Neomezená délka cvičení, v ceně sauna, sprcha. Sleva na solárium. Jedno měření Inbody zdarma.</p>
+         </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="h-100 cenik_karta">
+      <h3 class="text-center mb-0 fs-5">Roční permanentka</h3>
+      <h2 class="fs-1 text-center yellow fw-bold my-2 my-md-5">19 900 <span class="fs-5">Kč</span></h2>
+      
+      <p>Neomezená délka cvičení, v ceně sauna, sprcha. Sleva na solárium. Dvě měření Inbody zdarma.</p>
+      </div>
+    </div>
+  </div>
+                      
+      <div class="row g-3 mb-0 mb-sm-hhhhh1fffffff3">
+    <div class="col-6 col-md-3">
+          <div class="h-100 cenik_karta">
+      <h3 class="text-center mb-0 fs-5">Deset vstupů</h3>
+      <h2 class="fs-1 text-center yellow fw-bold my-2 my-md-5">2 000 <span class="fs-5">Kč</span></h2>
+      
+      <p>Platnost 3 měsíce.
+Neomezená délka cvičení, v ceně sauna, sprcha.</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="h-100 cenik_karta">
+            <h3 class="text-center mb-0 fs-5">Akceptujeme</h3>
+  
+        <img src="images/Karta-MultiSport.png" alt="multisport" class="img-fluid my-4 mx-auto d-block img-multi"  loading="lazy">
+      
+      <p>Vstup zdarma. Neomezená délka cvičení, v ceně sauna, sprcha. </p>
+      </div>
+    </div>
+       <div class=" col col-md-6">
+        <div class="row justify-content-center align-items-center h-100">
+         <div class="col-8 cenik_karta">
+          <h2>První vstup zdarma</h2>
+           <p><a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal">Registrujte se <i class="bi bi-arrow-right"></i></a>  </p>
+          </div>
+         </div>
+        </div>
+
+      </div>                    
+</div>
+                   
+          </div>  </div>  
+ <!-- cenik konec -->                     
+        </div>      
+    <!-- vybaveni + cenik konec -->     
+    
+ <!-- treneri start -->   
+    <div id="treneri" class="container-fluid yellow_bg pt-4 pt-sm-5">
+       <div class="container">
+       
+   <h2>Naši trenéři</h2> 
+      <div class="row">
+ <div class="col-12 col-sm-6">
+      <p>Ať už jste úplný začátečník nebo pokročilý sportovec, naši zkušení trenéři vám pomohou na každém kroku vaší fitness cesty. Poradí vám s nastavením tréninkového plánu, správnou technikou cviků i výživou. Věříme v individuální přístup – společně najdete to,  co vám bude nejlépe vyhovovat a co vás bude bavit.</p>  
+        </div>
+        
+   <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+        <div class="bg-black rounded-4 h-100 align-content-center p-4 "><h2 class="mb-0 text-center yellow">Domluvte si lekci</h2></div>
+        </div>      
+         </div>  <!-- row -->
+         
+  <div class="row g-3 my-3">
+     <!-- Trenér 1 -->
+ <div class="col-6 col-md-3">
+  <a href="#trainerModal1" data-bs-toggle="modal" data-bs-target="#trainerModal1">  <div class="position-relative overflow-hidden">
+      <div class="ratio ratio_4-3"> 
+        <img src="images/tren1.jpg" alt="Novak trener" class="img-fluid object-fit-cover" loading="lazy">
+      </div>
+      <div class="tren_popis position-absolute bottom-0 start-0 end-0 text-center bg-dark bg-opacity-50 p-3" loading="lazy">
+        <h5 class="fw-bold fs-5 mb-3">Jiří Novák</h5>
+        <p class="text-white mb-0">Více info <i class="bi bi-arrow-right"></i></p>
+      </div>
+    </div></a>
+  </div>
+<!-- Modal Trenér 1 -->
+<div class="modal" id="trainerModal1" tabindex="-1" aria-labelledby="trainerModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="btn btn-dark">Domluvit si lekci</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid"><div class="row">
+             <div class="col ratio ratio_4-3 trener-img">
+        <img src="images/tren1.jpg" alt="Jiří Novák" class="img-fluid rounded object-fit-cover" loading="lazy"></div> 
+      <div class="col">     
+        <h3 class="modal-title mb-3" id="trainerModal1Label">Jiří Novák</h3> 
+        <p>Silový a kondiční trenér se zaměřením na individuální rozvoj a zdravý životní styl.</p>
+  <h5>Specializace</h5>
+  <ul>
+    <li>Silový trénink a funkční kondice</li>
+    <li>Individuální přístup k potřebám klienta</li>
+    <li>Stravovací a tréninkové plány na míru</li>
+  </ul>
+  <h5>Vzdělání</h5>
+  <ul>
+    <li>Instruktor fitness (Fitness institut)</li>
+    <li>Certifikace výživového poradce (Nutriacademy)</li>
+  </ul>
+  <h5>Zkušenosti</h5>
+  <ul>
+    <li>Dlouholetá praxe s klienty všech věkových kategorií</li>
+    <li>Pomoc při bolestech zad a poúrazové rehabilitaci</li>
+  </ul>
+        <hr>
+        <p>Jazyky cz/en</p>
+        
+        <p>tel. 777 123 456</p>
+        <p>jirinovak@mail.com</p>
+                
+          </div> 
+   </div> </div> </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Trenér 1 konec --> 
+    
+    
+  <!-- Trenér 2 -->
+  <div class="col-6 col-md-3">
+    <div class="position-relative overflow-hidden">
+    <a href="#trainerModal2" data-bs-toggle="modal" data-bs-target="#trainerModal2">   <div class="ratio ratio_4-3">
+        <img src="images/tren3.jpg" alt="Dita Malá trenér" class="img-fluid object-fit-cover" loading="lazy">
+      </div>
+      <div class="tren_popis position-absolute bottom-0 start-0 end-0 text-center bg-dark bg-opacity-50 p-3">
+        <h5 class="fw-bold fs-5 mb-3">Dita Malá</h5>
+        <p class="text-white mb-0">Více info <i class="bi bi-arrow-right"></i></p>
+      </div></a>
+    </div>
+  </div>
+<!-- Modal Trenér 2 -->
+<div class="modal" id="trainerModal2" tabindex="-1" aria-labelledby="trainerModal1Labe2" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn btn-dark">Domluvit si lekci</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+ <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+             <div class="col ratio ratio_4-3 trener-img">
+        <img src="images/tren3.jpg" alt="Dita Malá" class="img-fluid rounded object-fit-cover" loading="lazy"></div> 
+      <div class="col">     
+        <h3 class="modal-title mb-3" id="trainerModal2Label">Dita Malá</h3> 
+ <p>Trenérka zaměřená na zdravý pohyb, prevenci zranění a celkovou vitalitu.</p>
+  <h5>Specializace</h5>
+  <ul>
+    <li>Funkční trénink a mobilita</li>
+    <li>Prevence zranění a kompenzační cvičení</li>
+  </ul>
+  <h5>Vzdělání</h5>
+  <ul>
+    <li>Instruktorka zdravotního cvičení (Česká fitness akademie)</li>
+    <li>Kurz rehabilitačního cvičení</li>
+  </ul>
+  <h5>Zkušenosti</h5>
+  <ul>
+    <li>Práce s klienty po operacích kolen a ramen</li>
+    <li>Vedení skupinových lekcí jógy a pilates</li>
+  </ul>
+        <hr>
+        <p>Jazyky cz/en/de</p>
+        
+        <p>tel. 777 236 598</p>
+        <p>ditamala@mail.com</p>
+          </div> 
+   </div> </div> </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Trenér 2 konec --> 
+    
+    
+  <!-- Trenér 3 -->
+  <div class="col-6 col-md-3">
+    <div class="position-relative overflow-hidden">
+    <a href="#trainerModal3" data-bs-toggle="modal" data-bs-target="#trainerModal3">
+      <div class="ratio ratio_4-3">
+        <img src="images/tren2.jpg" alt="Kasík trenér" class="img-fluid object-fit-cover" loading="lazy">
+      </div>
+      <div class="tren_popis position-absolute bottom-0 start-0 end-0 text-center bg-dark bg-opacity-50 p-3">
+        <h5 class="fw-bold fs-5 mb-3">Martin Kasík</h5>
+        <p class="text-white mb-0">Více info <i class="bi bi-arrow-right"></i></p>
+      </div></a>
+    </div>
+  </div>
+<!-- Modal Trenér 3 -->
+<div class="modal" id="trainerModal3" tabindex="-1" aria-labelledby="trainerModal1Labe3" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn btn-dark">Domluvit si lekci</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid"><div class="row">
+             <div class="col ratio ratio_4-3 trener-img">
+        <img src="images/tren2.jpg" alt="Martin Kasík" class="img-fluid rounded object-fit-cover" loading="lazy"></div> 
+      <div class="col">     
+        <h3 class="modal-title mb-3" id="trainerModal3Label">Martin Kasík</h3> 
+<p>Osobní trenér a bývalý závodní sportovec s důrazem na výkonnostní trénink.</p>
+  <h5>Specializace</h5>
+  <ul>
+    <li>Výbušná síla a kondice</li>
+    <li>Sportovní příprava mládeže</li>
+  </ul>
+  <h5>Vzdělání</h5>
+  <ul>
+    <li>Fakulta tělesné výchovy a sportu UK</li>
+    <li>Certifikace: Strength &amp; Conditioning Coach</li>
+  </ul>
+  <h5>Zkušenosti</h5>
+  <ul>
+    <li>Spolupráce s mladými sportovci (fotbal, atletika)</li>
+    <li>Individuální příprava vrcholových sportovců</li>
+  </ul>
+        <hr>
+        <p>Jazyky cz</p>
+        
+        <p>tel. 777 745 896</p>
+        <p>martinkasik@mail.com</p>
+          </div> 
+   </div> </div> </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Trenér 3 konec --> 
+    
+  <!-- Trenér 4 -->
+  <div class="col-6 col-md-3">
+    <div class="position-relative overflow-hidden">
+      <a href="#trainerModal4" data-bs-toggle="modal" data-bs-target="#trainerModal4">
+        <div class="ratio ratio_4-3">
+        <img src="images/tren4.jpg" alt="Szabová trenér" class="img-fluid object-fit-cover" loading="lazy">
+      </div>
+      <div class="tren_popis position-absolute bottom-0 start-0 end-0 text-center bg-dark bg-opacity-50 p-3">
+        <h5 class="fw-bold fs-5 mb-3">Lenka Szabová</h5>
+        <p class="text-white mb-0">Více info <i class="bi bi-arrow-right"></i></p>
+      </div></a>
+    </div>
+  </div>  
+    
+   <!-- Modal Trenér 4 -->
+<div class="modal" id="trainerModal4" tabindex="-1" aria-labelledby="trainerModal1Labe4" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn btn-dark">Domluvit si lekci</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid"><div class="row">
+             <div class="col ratio ratio_4-3 trener-img">
+        <img src="images/tren4.jpg" alt="Lenka Szabová" class="img-fluid rounded object-fit-cover " loading="lazy"></div> 
+      <div class="col">     
+        <h3 class="modal-title mb-3" id="trainerModal4Label">Lenka Szabová</h3> 
+ <p>Fitness trenérka a nutriční specialistka, která spojuje pohyb a zdravou výživu.</p>
+  <h5>Specializace</h5>
+  <ul>
+    <li>Redukce hmotnosti a formování postavy</li>
+    <li>Kombinace tréninku a výživového poradenství</li>
+  </ul>
+  <h5>Vzdělání</h5>
+  <ul>
+    <li>Nutriacademy – výživový poradce</li>
+    <li>Certifikace Fitness trenér II. třídy</li>
+  </ul>
+  <h5>Zkušenosti</h5>
+  <ul>
+    <li>Úspěšné vedení klientů k dlouhodobým výsledkům</li>
+    <li>Publikace článků o zdravém životním stylu</li>
+  </ul>
+        <hr>
+        <p>Jazyky cz/ru</p>
+        
+        <p>tel. 777 456 985</p>
+        <p>lenkaszabova@mail.com</p>
+          </div> 
+   </div> </div> </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Trenér 4 konec -->  
+    
+    
+   </div>  <!-- row -->
+         </div>  
+    </div>
+    <!-- treneri konec -->    
+        
+<div class=" bg-black muscle_back2 container-fluid">
+    <!-- aplikace start-->
+     
+       <div class="container py-5">
+    <div class="row">
+     <div class="col-12 col-sm-6 mb-5 mb-sm-0">
+      <img src="images/aplikace_transp.png" alt="Aplikace" class="img-fluid app-foto mx-auto d-block" loading="lazy">
+      
+    </div>   
+         <div class="col-12 col-sm-6">
+      <h2 class="yellow">Stáhněte si naši aplikaci, ať Vám nic neunikne. Rezervace našich služeb na pár kliknutí.</h2>
+     <img src="images/google-play.svg" alt="google play store" class="img-fluid d-inline d-sm-block" style="max-width: 11rem" loading="lazy" >
+           <img src="images/app-store.svg" alt="app store" class="img-fluid d-inline d-sm-block my-5"  style="max-width: 11rem" loading="lazy">
+    </div>   
+    </div>  <!-- row -->
+   
+    
+    </div>      <!-- aplikace konec-->
+    
+       <!-- kontakty start-->
+          
+       <div id="kontakt" class="container pb-5 text-white">
+    <div class="row kontakt_dole">
+      <div class="col-md-4 col-6">
+       <h3 class="yellow"> Užitečné</h3>
+
+        <p><a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal">Členství&nbsp;&#62;</a> </p>
+
+<p><a href="#novinky"  class="text-white text-decoration-none">Novinky&nbsp;&#62;</a> </p>
+
+<p style="white-space: nowrap">První návštěva&nbsp;&#62;</p>
+
+<p>Časté dotazy&nbsp;&#62; </p>
+
+<p>Kariéra&nbsp;&#62; </p>
+
+
+
+ </div>
+      <div class="col-md-4 col-6">
+      <h3 class="yellow">Kontakt </h3>
+
+<p>Krátká 28, Praha 5</p>
+
+<p class="text-white text-decoration-none">info@fitmania.cz</p>
+
+<p>735 159 753</p>
+        
+  <p>  <a href="#" class="text-white"> <i class="bi bi-facebook" style="font-size: 2rem;"></i></a>
+   <a href="#" class="text-white"> <i class="bi bi-instagram" style="font-size:2rem;"></i></a>      
+  </p>      
+        
+      </div> 
+      <div class="col-md-4 mt-5 mt-md-0"> 
+  <h3 class="yellow">Otevírací doba</h3>
+    <div class="row"><div class="col-6 col-md-12">
+        
+        <p>Pondělí - Pátek <br>
+        <strong>06:00 - 22:00</strong>
+        </p></div>
+       <div class="col-6 col-md-12 mt-0 mt-md-4">
+            <p>Sobota, neděle<br>
+        <strong>07:00 - 22:00</strong>
+        </p></div>
+     </div>
+      </div> 
+       </div>  <!-- row -->
+    </div>    <!-- kontakty konec--> 
+    </div><!-- muscle back 2 konec--> 
+    
+    
+         <!-- banery start-->
+            <div class="container-fluid bg-white bannery">
+       <div class="container py-5">
+    <div class="row">
+      <h2>Spolupracujeme</h2>
+      <div class="col">  
+    <img src="images/Matrix.jpg" alt="Matrix logo" class="img-fluid" loading="lazy" >
+        <img src="images/ergoline.PNG" alt="Ergoline logo" class="img-fluid" loading="lazy" >
+          <img src="images/nutrend.jpg" alt="Nutrend logo" class="img-fluid" loading="lazy" >
+          <img src="images/ziva.jpg" alt="Ziva logo" class="img-fluid" loading="lazy" >
+         <img src="images/technogym.png" alt="Technogym logo" class="img-fluid" loading="lazy" >
+        
+       </div> 
+       </div>  <!-- row -->
+    </div> 
+    
+    </div>      <!-- banery konec--> 
+    
+    
+    <!-- top scroll -->
+     <div id="back-to-top" class="pointer">     
+  <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 16 16" fill="currentColor" class="custom-icon">
+    <!-- Žlutý kruh s černým obrysem -->
+    <circle cx="8" cy="8" r="7" fill="rgb(255, 195, 61)" stroke="black" stroke-width="1"/>
+    <!-- Černá šipka -->
+    <path fill="black" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 
+      2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 
+      0 0 0-.708 0l-3 3a.5.5 0 1 0 
+      .708.708L7.5 5.707V11.5A.5.5 0 0 0 
+      8 12z"/>
+  </svg>
+</div>
+     <!-- top scroll -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="slider_img.js"></script>
+   <script src="slider.js"></script>
+ <script src="script.js"></script>
+  </body>
+</html>
