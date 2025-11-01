@@ -132,11 +132,12 @@ p:last-child {
 }
 
 .centering {
-  min-height: 100dvh;          
+ height: 100%;          
   display: flex;                
-  flex-direction: column;     
-  justify-content: center;      
-  box-sizing: border-box;
+  flex-direction: column;    
+    justify-content: center;
+  align-items: center;
+  margin-top: -50px;
 }
 
 
@@ -584,6 +585,14 @@ display: none;
     display: none;
   }
   
+.centering {
+ height: 100%;          
+  display: flex;                
+  flex-direction: column;     
+  justify-content: center; 
+  margin-top: 0px;
+}
+
   .headline {
   font-family: "Stick No Bills", sans-serif;
   font-optical-sizing: auto;
