@@ -28,6 +28,14 @@
     <![endif]-->
     <title>Newsletter</title>
     <style>
+ 
+  .no-link a {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
       @media only screen and (max-width: 600px) {
         table[class="wrapper"] {
           width: 100% !important;
@@ -70,18 +78,14 @@
         body,
         table,
         td {
-          background-color: #f2f2f2 !important;
           color: #000000 !important;
         }
         a {
           color: #ff453a !important;
         }
-        h1,
-        h2,
-        h3,
-        p,
-        td {
-          color: #000000 !important;
+
+        h2 {
+          color: #ffffff !important;
         }
         .btn,
         a[style*="background-color:#e41f1f; color: #ffffff !important;"] {
@@ -119,6 +123,14 @@
         color: #ffffff !important;
         font-size: inherit !important;
         font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      #MessageViewBody a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
         font-weight: inherit !important;
         line-height: inherit !important;
       }
@@ -189,7 +201,6 @@
                       style="
                         padding: 12px 28px;
                         background-color: #e41f1f !important;
-                        color: #ffffff !important;
                         border-radius: 10px;
                       "
                     >
@@ -199,7 +210,7 @@
                           padding: 0;
                           font-size: 34px;
                           font-family: Arial, Helvetica, sans-serif;
-                          color: #ffffff !important;
+                          color: #ffffff;
                           background-color: #e41f1f !important;
                           font-weight: bold;
                         "
@@ -221,8 +232,8 @@
                 <img
                   src="https://dbrvsk-git.github.io/News1/sip.png"
                   alt="sip"
-                  width="135"
-                  height="22"
+                  width="141"
+                  height="34"
                   style="display: block; border: 0"
                 />
               </td>
@@ -237,7 +248,7 @@
                   font-family: Arial, Helvetica, sans-serif;
                 "
               >
-                Úterý, 4. listopadu 2025, 15:36
+                Úterý, 4. listopadu 2025, <span style="color: #000000; text-decoration: none;" class="no-link">15:36</span>
               </td>
             </tr>
             <tr>
@@ -336,16 +347,17 @@
                           style="
                             height: 48px;
                             v-text-anchor: middle;
-                            width: 220px;
+                            width: 126px;
                           "
                           arcsize="15%"
                           stroke="f"
                           fillcolor="#e41f1f"
+                          color="#ffffff"
                         >
                           <w:anchorlock />
                           <center
                             style="
-                              color: #ffffff;
+                              color: #ffffff !important;
                               font-family: Arial, Helvetica, sans-serif;
                               font-size: 18px;
                               font-weight: bold;
@@ -363,7 +375,7 @@
                         style="
                           background-color: #e41f1f;
                           border-radius: 8px;
-                          color: #ffffff;
+                          color: #ffffff !important;
                           display: inline-block;
                           font-size: 18px;
                           font-family: Arial, Helvetica, sans-serif;
@@ -456,13 +468,13 @@
                     >
                       Tento informační e-mail Vám odeslala společnost MAFRA,
                       a.s., se sídlem Praha 5, Karla Engliše 519/11, PSČ 150 00,
-                      IČ: 45313351, zápis v OR: Městský soud Praha, B/1328
+                      IČ: <span style="color: #000000; text-decoration: none;" class="no-link">45313351</span>, zápis v OR: Městský soud Praha, B/1328
                       a&nbsp;to na základě Vašeho požadavku na jeho zasílání.
                       Odhlásit se můžete
                       <a
                         href="#"
                         target="_blank"
-                        style="color: #666; text-decoration: underline"
+                        style="color: #666 !important; text-decoration: underline; background-color: transparent !important; "
                         >zde</a
                       >.
                     </td>
