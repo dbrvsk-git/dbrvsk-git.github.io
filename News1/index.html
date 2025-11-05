@@ -28,13 +28,12 @@
     <![endif]-->
     <title>Newsletter</title>
     <style>
- 
-  .no-link a {
-    pointer-events: none !important;
-    cursor: default !important;
-    text-decoration: none !important;
-    color: inherit !important;
-  }
+      .no-link a {
+        pointer-events: none !important;
+        cursor: default !important;
+        text-decoration: none !important;
+        color: inherit !important;
+      }
 
       @media only screen and (max-width: 600px) {
         table[class="wrapper"] {
@@ -53,6 +52,10 @@
         h2 {
           font-size: 22px !important;
         }
+        a[href^="tel"] {
+          text-decoration: inherit;
+          color: inherit;
+        }
       }
 
       @media only screen and (max-width: 480px) {
@@ -67,6 +70,10 @@
         }
         .hide-mobile {
           display: none !important;
+        }
+        a[href^="tel"] {
+          text-decoration: inherit;
+          color: inherit;
         }
       }
       :root {
@@ -113,14 +120,14 @@
       }
 
       a[x-apple-data-detectors] {
-        color: #ffffff !important;
+        color: inherit !important;
         font-size: inherit !important;
         font-family: inherit !important;
         font-weight: inherit !important;
         line-height: inherit !important;
       }
       u + #body a {
-        color: #ffffff !important;
+        color: inherit !important;
         font-size: inherit !important;
         font-family: inherit !important;
         font-weight: inherit !important;
@@ -131,13 +138,6 @@
         text-decoration: none !important;
         font-family: inherit !important;
         font-size: inherit !important;
-        font-weight: inherit !important;
-        line-height: inherit !important;
-      }
-      #MessageViewBody a {
-        color: #ffffff !important;
-        font-size: inherit !important;
-        font-family: inherit !important;
         font-weight: inherit !important;
         line-height: inherit !important;
       }
@@ -248,7 +248,9 @@
                   font-family: Arial, Helvetica, sans-serif;
                 "
               >
-                Úterý, 4. listopadu 2025, <span style="color: #000000; text-decoration: none;" class="no-link">15:36</span>
+                Úterý, 4. listopadu 2025, 15:<span style="display: none"
+                  >&#8203;</span
+                >36
               </td>
             </tr>
             <tr>
@@ -468,13 +470,20 @@
                     >
                       Tento informační e-mail Vám odeslala společnost MAFRA,
                       a.s., se sídlem Praha 5, Karla Engliše 519/11, PSČ 150 00,
-                      IČ: <span style="color: #000000; text-decoration: none;" class="no-link">45313351</span>, zápis v OR: Městský soud Praha, B/1328
-                      a&nbsp;to na základě Vašeho požadavku na jeho zasílání.
-                      Odhlásit se můžete
+                      IČ: 45<span style="display: none">&#8203;</span>313<span
+                        style="display: none"
+                        >&#8203;</span
+                      >351 , zápis v OR: Městský soud Praha, B/1328 a&nbsp;to na
+                      základě Vašeho požadavku na jeho zasílání. Odhlásit se
+                      můžete
                       <a
                         href="#"
                         target="_blank"
-                        style="color: #666 !important; text-decoration: underline; background-color: transparent !important; "
+                        style="
+                          color: #666 !important;
+                          text-decoration: underline;
+                          background-color: transparent !important;
+                        "
                         >zde</a
                       >.
                     </td>
