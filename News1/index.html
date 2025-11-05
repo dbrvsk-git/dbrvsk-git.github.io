@@ -1,203 +1,478 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="cs"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="format-detection"
+      content="telephone=no,address=no,email=no,date=no"
+    />
+
+    <!-- Pro Outlook -->
+    <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings>
+            <o:AllowPNG />
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+    <![endif]-->
     <title>Newsletter</title>
-
     <style>
-      * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: #f2f2f2;
-      }
-
-      h1 {
-        font-size: 32px;
-        margin-bottom: 25px;
-        text-align: center;
-        line-height: 145%;
-      }
-      main {
-        max-width: 600px;
-        background-image: url("back.jpg");
-        background-color: #fff5e1;
-        color: #000;
-        border-radius: 10px;
-        margin: 20px auto;
-        border: 1px solid #000;
-        hyphens: auto;
-      }
-      header {
-        text-align: center;
-        padding: 20px;
+      @media only screen and (max-width: 600px) {
+        table[class="wrapper"] {
+          width: 100% !important;
+        }
+        td[class="content"] {
+          padding: 10px !important;
+        }
+        img[class="responsive"] {
+          width: 100% !important;
+          height: auto !important;
+        }
+        h1 {
+          font-size: 26px !important;
+        }
+        h2 {
+          font-size: 22px !important;
+        }
       }
 
-      .logo {
-        display: block;
-        margin: 0 auto 35px;
+      @media only screen and (max-width: 480px) {
+        td[class="content"] {
+          padding: 7px !important;
+        }
+        h1 {
+          font-size: 22px !important;
+        }
+        h2 {
+          font-size: 20px !important;
+        }
+        .hide-mobile {
+          display: none !important;
+        }
+      }
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
       }
 
-      .sip {
-        display: block;
-        margin: 0 auto 15px;
+      @media (prefers-color-scheme: dark) {
+        body,
+        table,
+        td {
+          background-color: #f2f2f2 !important;
+          color: #000000 !important;
+        }
+        a {
+          color: #ff453a !important;
+        }
+        h1,
+        h2,
+        h3,
+        p,
+        td {
+          color: #000000 !important;
+        }
+        .btn,
+        a[style*="background-color:#e41f1f; color: #ffffff !important;"] {
+          background-color: #e41f1f !important;
+          color: #ffffff !important;
+        }
+        .light-mode {
+          display: none !important;
+        }
+        .dark-mode {
+          display: block !important;
+        }
       }
 
-      .bleskova-zprava {
-        font-size: 34px;
-        padding: 5px 10px;
-        background-color: #e41f1f;
-        color: #fff;
-        font-weight: bold;
-        line-height: 150%;
-        border-radius: 10px;
-        margin: 0 auto 35px;
-        box-shadow: 0 2px 5px #333;
+      .dark-mode {
+        display: none;
       }
-      .date {
-        font-size: 18px;
-        margin: 0 auto 25px;
-        text-align: center;
-        line-height: 150%;
+
+      @media (prefers-color-scheme: dark) {
+        a,
+        .btn {
+          background-color: #ff453a !important;
+          color: #ffffff !important;
+        }
       }
-      .line1 {
-        width: 50%;
-        height: 2px;
-        background-color: #000;
-        margin: 0px auto 25px;
+
+      a[x-apple-data-detectors] {
+        color: #ffffff !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
       }
-      .main-img {
-        width: 100%;
-        height: auto;
-        margin: 0 auto 25px;
-        box-shadow: 0 2px 5px #333;
+      u + #body a {
+        color: #ffffff !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
       }
-      .text {
-        font-size: 20px;
-        text-align: left;
-        line-height: 150%;
-        margin: 0 20px;
-        border-bottom: 1px solid #000;
-        text-align: justify;
-      }
-      .button-red {
-        background-color: #e41f1f;
-        color: #fff;
-        padding: 7px 20px;
-        border-radius: 18px;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 35px auto;
-        display: block;
-        width: 95px;
-        box-shadow: 0 2px 4px #999;
-      }
-      .button-red:hover {
-        box-shadow: 0 0px 0px #333;
-      }
-      footer {
-        margin: 0px 20px 20px;
-        text-align: center;
-        padding: 10px;
-        font-size: 12px;
-        line-height: 150%;
-        border-radius: 10px;
-        border: 1px solid #666;
-        color: #666;
-      }
-      .ico {
-        display: flex;
-        justify-content: center;
-        margin: 35px auto;
-      }
-      .ico img {
-        margin: 0 10px;
+      #MessageViewBody a {
+        color: #ffffff !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
       }
     </style>
   </head>
-  <body>
-    <main>
-      <header>
-        <a href="https://www.idnes.cz/" target="_blank"
-          ><img
-            src="logo.png"
-            alt="idnes logo"
-            width="185px"
-            height="40px"
-            class="logo"
-        /></a>
+  <body style="margin: 0; padding: 0; background-color: #f2f2f2; hyphens: auto">
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      align="center"
+      style="background-color: #f2f2f2"
+    >
+      <tr>
+        <td align="center">
+          <table
+            class="wrapper"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              background-color: #fff5e1;
+              color: #000;
+              border: 1px solid #000;
+              border-collapse: collapse;
+              max-width: 600px;
+            "
+          >
+            <tr>
+              <td align="center" style="padding: 20px 20px 15px 20px">
+                <a href="https://www.idnes.cz/" target="_blank">
+                  <img
+                    src="https://dbrvsk-git.github.io/News1/logo.png"
+                    alt="idnes logo"
+                    width="185"
+                    height="40"
+                    style="display: block; border: 0; outline: none"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 20px">
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="center"
+                  role="presentation"
+                  style="
+                    background-color: #e41f1f;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 5px #333;
+                  "
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        padding: 12px 28px;
+                        background-color: #e41f1f !important;
+                        color: #ffffff !important;
+                        border-radius: 10px;
+                      "
+                    >
+                      <h2
+                        style="
+                          margin: 0;
+                          padding: 0;
+                          font-size: 34px;
+                          font-family: Arial, Helvetica, sans-serif;
+                          color: #ffffff !important;
+                          background-color: #e41f1f !important;
+                          font-weight: bold;
+                        "
+                      >
+                        BLESKOVÁ ZPRÁVA
+                      </h2>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-        <div class="bleskova-zprava">
-          <p>BLESKOVÁ ZPRÁVA</p>
-        </div>
+            <tr>
+              <td
+                align="center"
+                style="padding: 10px 20px 35px 20px"
+                class="hide-mobile light-mode"
+              >
+                <img
+                  src="https://dbrvsk-git.github.io/News1/sip.png"
+                  alt="sip"
+                  width="135"
+                  height="22"
+                  style="display: block; border: 0"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="center"
+                style="
+                  font-size: 16px;
+                  line-height: 150%;
+                  padding: 0 20px 25px 20px;
+                  font-family: Arial, Helvetica, sans-serif;
+                "
+              >
+                Úterý, 4. listopadu 2025, 15:36
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-bottom: 25px">
+                <table width="50%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td
+                      style="
+                        background-color: #000;
+                        height: 1px;
+                        line-height: 1px;
+                        font-size: 0;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 0 20px 25px 20px">
+                <h1
+                  style="
+                    font-size: 32px;
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 140%;
+                  "
+                >
+                  Semifinále je blízko. Siniaková s&nbsp;Townsendovou porazily
+                  obhájkyně
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 0 0 25px 0">
+                <a
+                  href="https://www.idnes.cz/sport/tenis/semifinale-je-blizko-siniakova-s-townsendovou-na-turnaji-mistryn-porazily-obhajkyne.A251104_145111_tenis_ald"
+                >
+                  <img
+                    src="https://dbrvsk-git.github.io/News1/tenis.jpg"
+                    alt="tenis"
+                    width="600"
+                    height="346"
+                    class="responsive"
+                    style="
+                      display: block;
+                      width: 100%;
+                      max-width: 600px;
+                      height: auto;
+                      border: 0;
+                      box-shadow: 0 2px 5px #333;
+                    "
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="left"
+                class="content"
+                style="
+                  padding: 0 20px;
+                  font-size: 20px;
+                  line-height: 150%;
+                  text-align: justify;
+                  font-family: Arial, Helvetica, sans-serif;
+                "
+              >
+                Kateřina Siniaková s&nbsp;Taylor Town&shy;sendovou na
+                teni&shy;sovém Turnaji mistryň v&nbsp;repríze loňského finále
+                porazily 6:4 a&nbsp;7:6 obháj&shy;kyně titulu Gabrielu
+                Dabrowskou z&nbsp;Kanady a&nbsp;Erin Rout&shy;liffeovou
+                z&nbsp;Nového Zélandu a&nbsp;mají na dosah semi&shy;finále.
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="center"
+                style="padding: 35px 20px; border-bottom: 1px solid #000"
+              >
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="center"
+                  role="presentation"
+                >
+                  <tr>
+                    <td align="center" style="padding: 0">
+                      <!--[if mso]>
+                        <v:roundrect
+                          xmlns:v="urn:schemas-microsoft-com:vml"
+                          xmlns:w="urn:schemas-microsoft-com:office:word"
+                          href="https://www.idnes.cz/sport/tenis/semifinale-je-blizko-siniakova-s-townsendovou-na-turnaji-mistryn-porazily-obhajkyne.A251104_145111_tenis_ald"
+                          style="
+                            height: 48px;
+                            v-text-anchor: middle;
+                            width: 220px;
+                          "
+                          arcsize="15%"
+                          stroke="f"
+                          fillcolor="#e41f1f"
+                        >
+                          <w:anchorlock />
+                          <center
+                            style="
+                              color: #ffffff;
+                              font-family: Arial, Helvetica, sans-serif;
+                              font-size: 18px;
+                              font-weight: bold;
+                            "
+                          >
+                            Číst dále →
+                          </center>
+                        </v:roundrect>
+                      <![endif]-->
 
-        <img src="sip.png" alt="sip" width="153px" height="30px" class="sip" />
-      </header>
-
-      <section class="date">
-        <p>Úterý, 4. listopadu 2025, 15:36</p>
-      </section>
-      <div class="line1"></div>
-
-      <h1>
-        Semifinále je blízko. Siniaková s&nbsp;Townsendovou porazily obhájkyně
-      </h1>
-
-      <img
-        src="tenis.jpg"
-        alt="tenis"
-        width="600px"
-        height="346px"
-        class="main-img"
-      />
-
-      <section class="text">
-        <p>
-          Kateřina Siniaková s&nbsp;Taylor Townsendovou na tenisovém Turnaji
-          mistryň v&nbsp;repríze loňského finále porazily 6:4 a&nbsp;7:6
-          obhájkyně titulu Gabrielu Dabrowskou z&nbsp;Kanady a&nbsp;Erin
-          Routliffeovou z&nbsp;Nového Zélandu a&nbsp;mají na dosah semifinále.
-        </p>
-
-        <a
-          href="https://www.idnes.cz/sport/tenis/semifinale-je-blizko-siniakova-s-townsendovou-na-turnaji-mistryn-porazily-obhajkyne.A251104_145111_tenis_ald"
-          class="button-red"
-          target="_blank"
-          >Číst dále →</a
-        >
-      </section>
-      <secion class="ico">
-        <a href="https://www.facebook.com/iDNES.cz" target="_blank"
-          ><img
-            src="icons8-facebook-50.png"
-            alt="facebook"
-            width="32px"
-            height="32px"
-        /></a>
-
-        <a href="https://instagram.com/idnescz/" target="_blank"
-          ><img
-            src="icons8-instagram-50.png"
-            alt="instagram"
-            width="32px"
-            height="32px"
-        /></a>
-        <a href="https://x.com/iDNEScz" target="_blank"
-          ><img src="icons8-x-50.png" alt="x" width="32px" height="32px"
-        /></a>
-      </secion>
-      <footer>
-        <p>
-          Tento informační e-mail Vám odeslala společnost MAFRA, a.s., se sídlem
-          Praha 5, Karla Engliše 519/11, PSČ 150 00, IČ: 45313351, zápis v OR:
-          Městský soud Praha, B/1328 a&nbsp;to na základě Vašeho požadavku na
-          jeho zasílání. Odhlásit se můžete
-          <a href="#" target="_blank" style="color: inherit">zde</a>.
-        </p>
-      </footer>
-    </main>
+                      <!--[if !mso]><!-- -->
+                      <a
+                        href="https://www.idnes.cz/sport/tenis/semifinale-je-blizko-siniakova-s-townsendovou-na-turnaji-mistryn-porazily-obhajkyne.A251104_145111_tenis_ald"
+                        target="_blank"
+                        style="
+                          background-color: #e41f1f;
+                          border-radius: 8px;
+                          color: #ffffff;
+                          display: inline-block;
+                          font-size: 18px;
+                          font-family: Arial, Helvetica, sans-serif;
+                          text-align: center;
+                          text-decoration: none;
+                          line-height: 48px;
+                          width: 126px;
+                          font-weight: bold;
+                          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                          -webkit-text-size-adjust: none;
+                        "
+                      >
+                        Číst dále →
+                      </a>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 35px 0">
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="center"
+                >
+                  <tr>
+                    <td align="center" style="padding: 0 10px">
+                      <a
+                        href="https://www.facebook.com/iDNES.cz"
+                        target="_blank"
+                      >
+                        <img
+                          src="https://dbrvsk-git.github.io/News1/icons8-facebook-50.png"
+                          alt="facebook"
+                          width="32"
+                          height="32"
+                          style="display: block; border: 0"
+                        />
+                      </a>
+                    </td>
+                    <td align="center" style="padding: 0 10px">
+                      <a href="https://instagram.com/idnescz/" target="_blank">
+                        <img
+                          src="https://dbrvsk-git.github.io/News1/icons8-instagram-50.png"
+                          alt="instagram"
+                          width="32"
+                          height="32"
+                          style="display: block; border: 0"
+                        />
+                      </a>
+                    </td>
+                    <td align="center" style="padding: 0 10px">
+                      <a href="https://x.com/iDNEScz" target="_blank">
+                        <img
+                          src="https://dbrvsk-git.github.io/News1/icons8-x-50.png"
+                          alt="x"
+                          width="32"
+                          height="32"
+                          style="display: block; border: 0"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 0 20px 20px 20px">
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="center"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        padding: 10px;
+                        border: 1px solid #666;
+                        border-radius: 10px;
+                        font-size: 12px;
+                        line-height: 150%;
+                        color: #666;
+                        font-family: Arial, Helvetica, sans-serif;
+                      "
+                    >
+                      Tento informační e-mail Vám odeslala společnost MAFRA,
+                      a.s., se sídlem Praha 5, Karla Engliše 519/11, PSČ 150 00,
+                      IČ: 45313351, zápis v OR: Městský soud Praha, B/1328
+                      a&nbsp;to na základě Vašeho požadavku na jeho zasílání.
+                      Odhlásit se můžete
+                      <a
+                        href="#"
+                        target="_blank"
+                        style="color: #666; text-decoration: underline"
+                        >zde</a
+                      >.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
