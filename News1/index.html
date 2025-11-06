@@ -105,18 +105,19 @@
         .dark-mode {
           display: block !important;
         }
+        a img {
+          mix-blend-mode: normal !important;
+          background-color: transparent !important;
+        }
+
+        [data-ogsc] a img {
+          mix-blend-mode: normal !important;
+          background-color: transparent !important;
+        }
       }
 
       .dark-mode {
         display: none;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        a,
-        .btn {
-          background-color: #ff453a !important;
-          color: #ffffff !important;
-        }
       }
 
       a[x-apple-data-detectors] {
@@ -183,6 +184,8 @@
                     display: inline-block;
                     line-height: 0;
                     text-decoration: none;
+                    background-color: transparent !important;
+                    mso-line-height-rule: exactly;
                   "
                 >
                   <img
